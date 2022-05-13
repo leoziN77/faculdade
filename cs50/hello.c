@@ -4,6 +4,6 @@
 int main(void)
 {
     // Computador dando oi
-    string answer = get_string("Whats's your name?");
+    string answer = get_string("Qual o seu nome meu caro?");
     printf("hello, %s\n", answer);
 }
