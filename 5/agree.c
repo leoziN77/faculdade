@@ -3,13 +3,13 @@
 
 int main(void)
 {
-    chat c = get_char("Você condorda? ");
-    if (c == 'y');
+    char c = get_char("Você condorda? ");
+    if (c == 'y')
     {
-        printf("Concordo\n");
+        printf("Concordo.\n");
     }
     else if (c == 'n')
     {
-        printf("Não concordo.");
+        printf("Não concordo.\n");
     }
 }
