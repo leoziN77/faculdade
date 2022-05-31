@@ -3,8 +3,12 @@
 
 int main(void)
 {
+    //Pegando dois numeros aleatórios, dividindo, e dando um resultado (z)
     int x = get_int("x: ");
 
     int y = get_int("y: ");
 
-    float
+    float z = x / y;
+
+    printf("%f\n", z);
+}
