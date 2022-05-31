@@ -7,7 +7,7 @@ int main(void)
     int x = get_int("x: ");
     int y = get_int("y: ");
     //Dividindo x por y
-    float z = x / y;
+    float z = (float) x / (float) y;
     //E vai gerar (z= resultado)
     printf("%f\n", z);
 }
