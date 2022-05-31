@@ -3,10 +3,10 @@
 
 int main(void)
 {
-    //Juntando dois numeros qualquer e somando 
-    int x = get_int("x: ");
+    //Juntando dois numeros qualquer e somando
+    long x = get_long("x: ");
 
-    int y = get_int("y: ");
+    long y = get_long("y: ");
 
-    printf("%i\n", x + y);
+    printf("%li\n", x + y);
 }
