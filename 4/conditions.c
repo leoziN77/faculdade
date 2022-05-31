@@ -17,4 +17,9 @@ int main(void)
     else if (x > y)
     {
         printf("x é maior que y\n");
-        
+    }
+    else
+    {
+        printf("x é igual a y\n");
+    }
+}
