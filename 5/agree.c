@@ -10,5 +10,6 @@ int main(void)
     }
     else if (c == 'n')
     {
-        printf("Não concordo\n");
+        printf("Não concordo.");
     }
+}
