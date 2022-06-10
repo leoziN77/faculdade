@@ -13,4 +13,8 @@ int main(void)
 
     //Imprimir x pontos de interrogação
     for (int i = 0; i < n; i++)
+    {
+        printf("?");
+    }
+    printf("\n");
 }
