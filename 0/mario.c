@@ -18,7 +18,7 @@ int main(void)
             printf(" ");
 
         //Hashtag
-        for (int j = 0; j <= i; i++)
+        for (int j = 0; j <= i; j++)
             printf("#");
         printf("\n");
     }
