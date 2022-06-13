@@ -23,8 +23,9 @@ int main(void)
         {
             printf("#");
         }
+        //Lado oposto da piramide
         printf("  ");
-        for  (int j = 0; j <= i; j++)
+        for (int j = 0; j <= i; j++)
         {
             printf("#");
         }
