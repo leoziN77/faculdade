@@ -7,7 +7,7 @@ int main(void)
     do
     {
         //Tamanho desejado
-        n = get_int ("Altura: ");
+        n = get_int("Altura: ");
     }
     while (n < 1 || n > 8);
 
