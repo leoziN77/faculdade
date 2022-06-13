@@ -9,7 +9,7 @@ int main(void)
         //Tamanho desejado
         n = get_int("Altura: ");
     }
-    while (n < 1 || n > 10);
+    while (n < 1 || n > 15);
 
     for (int i = 0; i < n; i++)
     {
