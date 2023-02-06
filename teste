@@ -71,7 +71,7 @@ function handleEventKey(event) {
     }
   }
   else {
-    if (isStart) {
+    if (isStart) { 
       wrongMoveSound.play()
       currentPositionTyping = 0
       allInputKeys.forEach(key => key.input.classList.remove('key-input-right'))
