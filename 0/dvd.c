@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+	float dvd1, dvd2, dvd3, total;
+
+	//Solicita ao usuário o valor dos Dvds
+	printf("Digite o valor do primeiro Dvd: ");
+	scanf("%f", &dvd1);
+
+	printf("Digite o valor do segundo Dvd: ");
+	scanf("%f", &dvd2);
+
+	//Utilizei scanf para solicitar ao usuário a entrada dos valores das compras de dvd
+	printf("Digite o valor do terceiro Dvd: ");
+	scanf("%f", &dvd3);
+
+	//Calcula o valor total
+	total = dvd1 + dvd2 + dvd3;
+
+	//Utilizei %.2f\n para representar 2 casas decimais
+	//Exite o valor total da compra
+	printf("O valor total da compra e: R$%.2f\n", total);
+
+	return 0;
+}
