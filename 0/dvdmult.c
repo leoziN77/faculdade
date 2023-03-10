@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
 
 int main() {
+	setlocale(LC_ALL, "Portuguese");
 	float dvd1, total;
 
 	//%f representa o local onde será escrita uma variável float
@@ -13,7 +16,7 @@ int main() {
 
 	//Utilizei %.2f\n para representar 2 casas decimais
 	//Exibe o valor total da compra
-	printf("O valor total da compra e: R$%.2f\n", total);
+	printf("O valor total da compra é: R$%.2f\n", total);
 
 	return 0;
 }

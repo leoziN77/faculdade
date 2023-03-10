@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
 
 int main() {
+	setlocale(LC_ALL, "Portuguese");
 	float dvd1, dvd2, dvd3, total;
 
 	//Solicita ao usuário o valor dos Dvds
@@ -19,7 +22,7 @@ int main() {
 
 	//Utilizei %.2f\n para representar 2 casas decimais
 	//Exite o valor total da compra
-	printf("O valor total da compra e: R$%.2f\n", total);
+	printf("O valor total da compra é: R$%.2f\n", total);
 
 	return 0;
 }
