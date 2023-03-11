@@ -8,19 +8,19 @@ int main(){
     float cota1, cota2, cota3, cota4, media;
 
     //Entrada de dados
-    printf("Digite o valor da cotação na primeira concesssionária: R#");
+    printf("Digite o valor da cotação na primeira concesssionária: R$");
     scanf("%f", &cota1);
-    printf("Digite o valor da cotação na segunda concessionária: ");
+    printf("Digite o valor da cotação na segunda concessionária: R$");
     scanf("%f", &cota2);
-    printf("Digite o valor da cotação na terceira concessionária: ");
+    printf("Digite o valor da cotação na terceira concessionária: R$");
     scanf("%f", &cota3);
-    printf("Digite o valor da cotação na quarta concessionária: ");
+    printf("Digite o valor da cotação na quarta concessionária: R$");
     scanf("%f", &cota4);
 
     media = (cota1 + cota2 + cota3 + cota4)/4;
 
     //Saída de dados
-    printf("A média da cotação do carro nas quatro concessionárias é: %.2f\n", media);
+    printf("A média da cotação do carro nas quatro concessionárias é: R$%.2f\n", media);
 
     return 0;
 }
