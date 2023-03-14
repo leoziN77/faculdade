@@ -22,7 +22,7 @@ int main() {
 	total = dvd1 + dvd2 + dvd3;
 
 	//Utilizei %.2f\n para representar 2 casas decimais
-	//Exite o valor total da compra
+	//Exibe o valor total da compra
 	printf("O valor total da compra é: R$%.2f\n", total);
 
 	return 0;
