@@ -12,3 +12,7 @@ condição
 5<=10 V
 3!=2 V
 é apenas verdadeiro ou falso, ou seja apenas 2 opções
+
+entre apóstrofe é dado, ou seja 'a' = dado
+a = variável, pois não tem apóstrofe
+
