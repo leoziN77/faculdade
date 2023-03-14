@@ -24,11 +24,15 @@ simples: 2 possíveis respostas, porém 1 não é executada (if)
 
 int idade = 12;
 
-if(idade >= 18){
+//cond.simples
+if(idade >= 18){]
+    //lado verdadeiro
     printf("maior de idade");
 }
+//quando tempos else ela se torna uma condicional composta
 else
 {
+    //lado falso
     printf("menor de idade");
 }
 
