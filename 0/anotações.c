@@ -16,4 +16,5 @@ condição
 entre apóstrofe é dado, ou seja 'a' = dado
 a = variável, pois não tem apóstrofe
 
-estrutura condicional 
+estrutura condicional
+condição = comparação entre dois valores
