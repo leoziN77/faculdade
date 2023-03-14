@@ -18,3 +18,6 @@ a = variável, pois não tem apóstrofe
 
 estrutura condicional
 condição = comparação entre dois valores
+condicional composta ou simples
+composta: 2 possíveis respostas, verdadeiro ou falso
+simples: 
