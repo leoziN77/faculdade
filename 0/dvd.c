@@ -11,6 +11,7 @@ int main() {
 	scanf("%f", &dvd1);
 
 	printf("Digite o valor do segundo Dvd: ");
+	//& utilizado para armazenar espaço na memória
 	scanf("%f", &dvd2);
 
 	//Utilizei scanf para solicitar ao usuário a entrada dos valores das compras de dvd
