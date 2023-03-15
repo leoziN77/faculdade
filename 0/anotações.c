@@ -39,4 +39,4 @@ else
 return 0;
 
 quando utilizamos int, não é necesssário & comercial para declarar uma variável na string, apenas o nome da variável
-quanto utilizamos, string, char, float, além de ser necessário %s, %c, %f, também é necessário & comercial + nome da variável
+quanto utilizamos, string, char, float, além de ser necessário %s, %c, %f, também é necessário & comercial + nome da variável 
