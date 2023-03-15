@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+a:link{
+    color: black;
+}
+h1{
+    font-family: Arial;
+    font-size: 10rem;
+}
+img{
+    width: auto;
+    height: auto;
+    border: solid 2px blue;
+}
+.borda1{
+    font-family: Cambria;
+    font-size: 1rem;
+    border: solid 2px blue;
+}
