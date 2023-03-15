@@ -29,7 +29,7 @@ if(idade >= 18){]
     //lado verdadeiro
     printf("maior de idade");
 }
-//quando tempos else ela se torna uma condicional composta
+//quando temos else ela se torna uma condicional composta
 else
 {
     //lado falso
@@ -39,4 +39,4 @@ else
 return 0;
 
 quando utilizamos int, não é necesssário & comercial para declarar uma variável na string, apenas o nome da variável
-quanto utilizamos, string, char, float, além de ser necessário %s, %c, %f, também é necessário & comercial + nome da variável 
+quanto utilizamos, string, char, float, além de ser necessário %s, %c, %f, também é necessário & comercial + nome da variável
