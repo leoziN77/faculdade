@@ -9,12 +9,22 @@ h1{
     font-size: 10rem;
 }
 img{
-    width: auto;
-    height: auto;
     border: solid 2px blue;
+    height: 200px;
 }
 .borda1{
     font-family: Cambria;
     font-size: 1rem;
     border: solid 2px blue;
+}
+.botao{
+    background-color: blue;
+    color: white;
+    font-size: 4rem;
+    text-decoration: none;
+}
+div{
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
 }
