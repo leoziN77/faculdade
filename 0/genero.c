@@ -3,7 +3,7 @@
 #include <locale.h>
 
 int main(){
-	setlocale(LC_ALL, "Portugue");
+	setlocale(LC_ALL, "Portuguese");
 	char sexo;
 
 	printf("Digite seu gênero: M/F\n");
