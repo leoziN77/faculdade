@@ -11,7 +11,10 @@ int main(){
 
 	if(sexo == 'F')
 	{
-		printf("É mulher!");
+		printf("É mulher!\n");
+	}
+	else{
+		printf("É homem!\n");
 	}
 
 	return 0;
