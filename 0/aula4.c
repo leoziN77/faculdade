@@ -9,9 +9,13 @@ int main(){
     printf("Insira o valor: ");
     scanf("%f", &n);
 
-    if(n >= '20')
+    if(n >= 20)
     {
         printf("Maior que 20!\n");
+    }
+    else
+    {
+        printf("Menor que 20!\n");
     }
 
     return 0;
