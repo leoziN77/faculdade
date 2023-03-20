@@ -13,7 +13,8 @@ int main(){
 	{
 		printf("É mulher!\n");
 	}
-	else{
+	else
+	{
 		printf("É homem!\n");
 	}
 
