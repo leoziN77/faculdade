@@ -4,10 +4,10 @@
 
 int main(){
     setlocale(LC_ALL, "Portuguese");
-    int n;
+    float  n;
 
     printf("Insira o valor: ");
-    scanf("%d", &n);
+    scanf("%f", &n);
 
     if(n >= '20')
     {
