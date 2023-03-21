@@ -4,18 +4,6 @@
 
 int main(){
     setlocale(LC_ALL, "Portuguese");
-    int numero;
+    float p1, p2, media;
 
-    printf("Digite um valor para descobrir se é divisível por 3 e 7: ");
-    scanf("%d", &numero);
-
-    if(numero / 3 && numero / 7)
-    {
-        printf("O número é divisível por 3 e 7.\n");
-    }
-    else{
-        printf("O número não é divisível por 3 e 7.\n");
-    }
-
-    return 0;
-}
+    print
