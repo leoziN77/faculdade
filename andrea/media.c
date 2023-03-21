@@ -18,7 +18,7 @@ int main(){
 
     if(media >= 5)
     {
-        printf("Aprovado!\n", media);
+        printf("Aprovado!\n");
     }
 
     return 0;
