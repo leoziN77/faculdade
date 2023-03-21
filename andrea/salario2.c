@@ -4,6 +4,11 @@
 
 int main(){
 	setlocale(LC_ALL, "Portuguese");
+    float salario, novoSalario;
+
+    printf("Digite o valor do salário: ");
+    scanf("%f", &salario);
+
     
 
     return 0;
