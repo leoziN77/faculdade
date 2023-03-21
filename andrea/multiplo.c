@@ -11,11 +11,11 @@ int main(){
 
     if(numero % 3 == 0)
     {
-        printf("O número %d é múltiplo de 3.\n");
+        printf("O número %d é múltiplo de 3.\n", numero);
     }
     else
     {
-        printf("O número %d não é múltiplo de 3.\n");
+        printf("O número %d não é múltiplo de 3.\n", numero);
     }
 
     return 0;
