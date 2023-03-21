@@ -9,7 +9,14 @@ int main(){
     printf("Digite o valor do salário: ");
     scanf("%f", &salario);
 
-    
+    if(salario <= 3000)
+    {
+
+    }
+    else
+    {
+        
+    }
 
     return 0;
 }
