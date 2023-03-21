@@ -4,10 +4,10 @@
 
 int main(){
     setlocale(LC_ALL, "Portuguese");
-    float numero;
+    int numero;
 
     printf("Digite um valor para descobrir se é divisível por 3 e 7: ");
-    scanf("%f", &numero);
+    scanf("%d", &numero);
 
     if(numero / 3 && numero / 7)
     {
