@@ -14,6 +14,8 @@ int main(){
 
     media = (p1+p2)/2;
 
+    printf("Minha média é: %.2f\n", media);
+
     if(media >= 5)
     {
         printf("Aprovado!\n", media);
