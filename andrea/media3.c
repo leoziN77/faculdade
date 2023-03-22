@@ -24,4 +24,6 @@ int main(){
             printf("Exame");
         }
     }
+
+    return 0;
 }
