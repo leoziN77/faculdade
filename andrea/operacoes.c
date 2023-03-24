@@ -29,7 +29,7 @@ int main(){
 
 	if(opcao == A)
 	{
-		resultadp = numero1 + numero2
+		resultado = numero1 + numero2
 		printf("O resultado da soma é %.2f", resultado);
 	}
 	else
@@ -40,6 +40,6 @@ int main(){
 			printf("O resultado da multiplicação é %.2f", resultado);
 		}
 	}
-	
+
 	return 0;
 }
