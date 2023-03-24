@@ -27,35 +27,35 @@ int main(){
 	printf("Digite o segundo número: ");
 	scanf("%f", &numero2);
 
-	if(opcao == A)
+	if(opcao == 'A')
 	{
 		resultado = numero1 + numero2;
-		printf("O resultado da soma é %.2f", resultado);
+		printf("O resultado da soma é %.2f\n", resultado);
 	}
 	else
 	{
-		if(opcao == B)
+		if(opcao == 'B')
 		{
 			resultado = numero1 * numero2;
-			printf("O resultado da multiplicação é %.2f", resultado);
+			printf("O resultado da multiplicação é %.2f\n", resultado);
 		}
 		else
 		{
-			if(opcao == C)
+			if(opcao == 'C')
 			{
 				resultado = numero1 - numero2;
-				printf("O resultado da subtração é %.2f", resultado);
+				printf("O resultado da subtração é %.2f\n", resultado);
 			}
 			else
 			{
-				if(opcao == D)
+				if(opcao == 'D')
 				{
 					resultado = numero1 / numero2;
-					printf("O resultado da divisão é %.2f", resultado);
+					printf("O resultado da divisão é %.2f\n", resultado);
 				}
 				else
 				{
-					printf("Comando invalido!");
+					printf("Comando invalido!\n");
 				}
 			}
 		}
