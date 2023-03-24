@@ -4,12 +4,12 @@
 
 int main() {
     setlocale(LC_ALL, "Portuguese");
-    char nome;
+    char nome[50];
     int cpf, num_dependentes;
     float renda_anual, renda_liquida, aliquota, imposto, desconto;
 
     printf("Digite o nome do contribuinte: ");
-    scanf("%c", &nome);
+    scanf("%s", nome);
 
     printf("Digite o cpf do contribuinte: ");
     scanf("%d", &cpf);
@@ -48,7 +48,7 @@ int main() {
 
     imposto = renda_liquida * (aliquota/100);
 
-    printf("Nome: %c\n", nome);
+    printf("\nNome: %s\n", nome);
     printf("CPF: %d\n", cpf);
     printf("Renda Líquida: R$ %.2f\n", renda_liquida);
     printf("Alíquota: %.2f%%\n", aliquota);
