@@ -4,17 +4,17 @@
 
 int main() {
     setlocale(LC_ALL, "Portuguese");
-    char nome[50];
-    int cpf, num_dependentes;
+    char nome[50], cpf[12];
+    int num_dependentes;
     float renda_anual, renda_liquida, aliquota, imposto, desconto;
 
     printf("Digite o nome do contribuinte: ");
     scanf("%s", nome);
 
     printf("Digite o cpf do contribuinte: ");
-    scanf("%d", &cpf);
+    scanf("%s", cpf);
 
-    printf("Digite a renda anuald do contribuinte: ");
+    printf("Digite a renda anual do contribuinte: ");
     scanf("%f", &renda_anual);
 
     printf("Digite o número de dependentes do contribuinte: ");
@@ -26,6 +26,7 @@ int main() {
     if(renda_liquida < 800)
     {
         aliquota  = 0;
+        printf("O contribuinte está isento de imposto.\n");
     }
     else
     {
@@ -49,7 +50,7 @@ int main() {
     imposto = renda_liquida * (aliquota/100);
 
     printf("\nNome: %s\n", nome);
-    printf("CPF: %d\n", cpf);
+    printf("CPF: %s\n", cpf);
     printf("Renda Líquida: R$ %.2f\n", renda_liquida);
     printf("Alíquota: %.2f%%\n", aliquota);
     printf("Imposto a ser pago: R$ %.2f\n", imposto);
