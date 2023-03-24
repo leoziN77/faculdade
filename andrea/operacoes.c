@@ -21,6 +21,13 @@ int main(){
 	printf("\nEscolha a opção desejada: ");
 	scanf("%c", &opcao);
 
+	if(opcao == 'A' || opcao == 'a' || opcao == 'B' == opcao == 'b' || opcao == 'C' || opcao == 'c' || opcao == 'D' || opcao == 'd')
+	{}
+	else
+	{
+		printf("opção invalida");
+	}
+
 	printf("Digite o primeiro número: ");
 	scanf("%f", &numero1);
 
