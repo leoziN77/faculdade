@@ -4,7 +4,7 @@
 
 int main(){
 	setlocale(LC_ALL, "Portuguese");
-	float numero1, numero2, resultado;
+	float numero1, numero2, resultado, A, B, C, D;
 	char opcao;
 
 	printf("\n*********************************\n");
@@ -29,14 +29,14 @@ int main(){
 
 	if(opcao == A)
 	{
-		resultado = numero1 + numero2
+		resultado = numero1 + numero2;
 		printf("O resultado da soma é %.2f", resultado);
 	}
 	else
 	{
 		if(opcao == B)
 		{
-			resultado = numero1 * numero2
+			resultado = numero1 * numero2;
 			printf("O resultado da multiplicação é %.2f", resultado);
 		}
 	}
