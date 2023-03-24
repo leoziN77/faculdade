@@ -39,6 +39,26 @@ int main(){
 			resultado = numero1 * numero2;
 			printf("O resultado da multiplicação é %.2f", resultado);
 		}
+		else
+		{
+			if(opcao == C)
+			{
+				resultado = numero1 - numero2;
+				printf("O resultado da subtração é %.2f", resultado);
+			}
+			else
+			{
+				if(opcao == D)
+				{
+					resultado = numero1 / numero2;
+					printf("O resultado da divisão é %.2f", resultado);
+				}
+				else
+				{
+					printf("Comando invalido!");
+				}
+			}
+		}
 	}
 
 	return 0;
