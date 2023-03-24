@@ -4,7 +4,7 @@
 
 int main(){
 	setlocale(LC_ALL, "Portuguese");
-	float numero1, numero2, resultado, A, B, C, D;
+	float numero1, numero2, resultado;
 	char opcao;
 
 	printf("\n*********************************\n");
