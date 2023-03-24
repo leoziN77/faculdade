@@ -40,5 +40,6 @@ int main(){
 			printf("O resultado da multiplicação é %.2f", resultado);
 		}
 	}
+	
 	return 0;
 }
