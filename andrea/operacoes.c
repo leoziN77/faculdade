@@ -21,8 +21,6 @@ int main(){
 	printf("\nEscolha a opção desejada: ");
 	scanf("%c", &opcao);
 
-	if(A == )
-
 	printf("Digite o primeiro número: ");
 	scanf("%f", &numero1);
 
@@ -54,6 +52,10 @@ int main(){
 				{
 					resultado = numero1 / numero2;
 					printf("O resultado da divisão é: %.2f\n", resultado);
+				}
+				else
+				{
+					printf("Opção desejada inválida!\n");
 				}
 			}
 		}
