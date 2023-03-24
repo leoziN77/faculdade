@@ -21,18 +21,18 @@ int main(){
 	printf("\nEscolha a opção desejada: ");
 	scanf("%c", &opcao);
 
-	if((opcao == 'A') || (opcao == 'a') || (opcao == 'B') || (opcao == 'b') || (opcao == 'C') || (opcao == 'c') || (opcao == 'D') || (opcao == 'd'))
-	{}
+	if(opcao < 'A' || opcao > 'D')
+	{
+		printf("Opção desejada inválida!\n");
+	}
 	else
 	{
-		printf("Opção desejada invalida!\n");
+		printf("Digite o primeiro número: ");
+		scanf("%f", &numero1);
+
+		printf("Digite o segundo número: ");
+		scanf("%f", &numero2);
 	}
-
-	printf("Digite o primeiro número: ");
-	scanf("%f", &numero1);
-
-	printf("Digite o segundo número: ");
-	scanf("%f", &numero2);
 
 	if(opcao == 'A' || opcao == 'a')
 	{
@@ -59,10 +59,6 @@ int main(){
 				{
 					resultado = numero1 / numero2;
 					printf("O resultado da divisão é: %.2f\n", resultado);
-				}
-				else
-				{
-					printf("Opção desejada inválida!\n");
 				}
 			}
 		}
