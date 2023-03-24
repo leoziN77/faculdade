@@ -9,7 +9,7 @@ int main(){
 
 	printf("\n*********************************\n");
 	printf("*                               *\n");
-	printf("*          Menu de opções       *\n");
+	printf("*         Menu de opções        *\n");
 	printf("*                               *\n");
 	printf("*  A- Somar dois números        *\n");
 	printf("*  B- Multiplicar dois números  *\n");
