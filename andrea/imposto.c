@@ -51,7 +51,7 @@ int main() {
 
     printf("\nNome: %s\n", nome);
     printf("CPF: %s\n", cpf);
-    printf("Renda Líquida: R$%.2f\n", renda_liquida);
+    printf("Renda Líquida: R$%.2f\n", re    nda_liquida);
     printf("Alíquota: %.2f%%\n", aliquota);
     printf("Imposto a ser pago: R$%.2f\n", imposto);
 
