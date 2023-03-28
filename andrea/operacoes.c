@@ -60,10 +60,6 @@ int main(){
 					resultado = numero1 / numero2;
 					printf("O resultado da divisão é: %.2f\n", resultado);
 				}
-				else
-				{
-					printf("Codigo invalido")
-				}
 			}
 		}
 	}
