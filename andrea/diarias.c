@@ -56,7 +56,7 @@ int main(){
 		}
 
 		printf("Digite seu nome: ");
-		scanf("%s", &nome);
+		scanf("%c", &nome);
 
 		printf("Digite quantos dias ficou hospedado: ");
 		scanf("%d", &diarias_utilizadas);
@@ -76,7 +76,7 @@ int main(){
 
 			system("cls");
 
-			printf("\nNome: %s\n", nome);
+			printf("\nNome: %c\n", nome);
 			printf("Número de diárias: %d\n", diarias_utilizadas);
 			printf("Valor de consumo interno: R$%.2f\n", valor_consumo);
 			printf("Valor do quarto: R$%.2f\n", valor_unitario);
