@@ -22,6 +22,7 @@ int main(){
 
 	printf("\nQual o quarto escolhido: ");
 	scanf("%c", &quarto);
+	quarto = toupper(quarto);
 
 	if((quarto < 'A' || quarto > 'D') && (quarto < 'a' || quarto > 'd'))
 	{
@@ -67,25 +68,25 @@ int main(){
 		{
 			printf("Digite o valor de consumo interno: R$");
 			scanf("%f", &valor_consumo);
+
+			valor_total_diaria = valor_unitario * diarias_utilizadas;
+			subtotal = valor_total_diaria + valor_consumo;
+			taxa = subtotal * 0.1;
+			total = subtotal + taxa;
+
+			system("cls");
+
+			printf("\nNome: %s\n", nome);
+			printf("Número de diárias: %d\n", diarias_utilizadas);
+			printf("Valor de consumo interno: R$%.2f\n", valor_consumo);
+			printf("Valor do quarto: R$%.2f\n", valor_unitario);
+			printf("Valor total das diárias: R$%.2f\n", valor_total_diaria);
+			printf("Subtotal: R$%.2f\n", subtotal);
+			printf("Valor cobrado da taxa: R$%.2f\n", taxa);
+			printf("Valor total da sua estadia: R$%.2f\n", total);
+
 		}
-
 	}
-
-	valor_total_diaria = valor_unitario * diarias_utilizadas;
-	subtotal = valor_total_diaria + valor_consumo;
-	taxa = subtotal * 0.1;
-	total = subtotal + taxa;
-
-	system("cls");
-
-	printf("\nNome: %s\n", nome);
-	printf("Número de diárias: %d\n", diarias_utilizadas);
-	printf("Valor de consumo interno: R$%.2f\n", valor_consumo);
-	printf("Valor do quarto: R$%.2f\n", valor_unitario);
-	printf("Valor total das diárias: R$%.2f\n", valor_total_diaria);
-	printf("Subtotal: R$%.2f\n", subtotal);
-	printf("Valor cobrado da taxa: R$%.2f\n", taxa);
-	printf("Valor total da sua estadia: R$%.2f\n", total);
 
 	return 0;
 }
