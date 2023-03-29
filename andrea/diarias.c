@@ -30,12 +30,12 @@ int main(){
 	}
 	else
 	{
-		if (quarto == 'A' || quarto == 'a') {
+		if(quarto == 'A' || quarto == 'a') {
             valor_unitario = 150.00;
         }
 		else
 		{
-			if	(quarto == 'B' || quarto == 'b')
+			if(quarto == 'B' || quarto == 'b')
 			{
            		 valor_unitario = 100.00;
 			}
