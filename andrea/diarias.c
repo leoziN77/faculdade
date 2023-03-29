@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 int main(){
 	setlocale(LC_ALL, "Portuguese");
@@ -9,6 +10,7 @@ int main(){
 	int diarias_utilizadas;
 	float valor_unitario, valor_total_diaria, valor_consumo, subtotal, total, taxa;
 
+	//Menu de opções
 	printf("\n*********************************\n");
 	printf("*                               *\n");
 	printf("*         Menu de opções        *\n");
@@ -20,49 +22,43 @@ int main(){
 	printf("*                               *\n");
 	printf("*********************************\n");
 
+	//Qual a opção desejada
+	quarto = toupper(quarto); //Converte para maiúscula
 	printf("\nQual o quarto escolhido: ");
 	scanf("%c", &quarto);
-	quarto = toupper(quarto);
 
-	if((quarto < 'A' || quarto > 'D') && (quarto < 'a' || quarto > 'd'))
+	//Condição para alternativa inválida
+	if(quarto < 'A' || quarto > 'D')
 	{
-		printf("Quarto escolhido inválido!\n");
+		printf("Quarto escolhido inválido, opções válidas apenas entre A e D!\n");
 	}
 	else
 	{
-		if(quarto == 'A' || quarto == 'a') {
-            valor_unitario = 150.00;
-        }
-		else
+		//Switch case adicionado para definir os  valores
+		switch(quarto)
 		{
-			if(quarto == 'B' || quarto == 'b')
-			{
-           		 valor_unitario = 100.00;
-			}
-			else
-			{
-				if(quarto == 'C' || quarto == 'c')
-				{
-					valor_unitario = 75.00;
-				}
-				else
-				{
-					if(quarto == 'D' || quarto == 'd')
-					{
-						valor_unitario = 50.00;
-					}
-				}
-			}
+			case 'A':
+				valor_unitario = 150.00;
+				break;
+			case 'B':
+				valor_unitario = 100.00;
+				break;
+			case 'C':
+				valor_unitario = 75.00;
+				break;
+			case 'D':
+				valor_unitario = 50.00;
+				break;
 		}
 
 		printf("Digite seu nome: ");
-		scanf("%c", &nome);
+		scanf("%s", nome);
 
 		printf("Digite quantos dias ficou hospedado: ");
 		scanf("%d", &diarias_utilizadas);
 		if(diarias_utilizadas <1 || diarias_utilizadas >30)
 		{
-			printf("Dias inválidos!");
+			printf("Dias inválidos, selecione entre 1 e 30!");
 		}
 		else
 		{
@@ -76,7 +72,8 @@ int main(){
 
 			system("cls");
 
-			printf("\nNome: %c\n", nome);
+			//Tela final que o usuário vai visualizar
+			printf("\nNome: %s\n", nome);
 			printf("Número de diárias: %d\n", diarias_utilizadas);
 			printf("Valor de consumo interno: R$%.2f\n", valor_consumo);
 			printf("Valor do quarto: R$%.2f\n", valor_unitario);
