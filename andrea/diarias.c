@@ -23,9 +23,9 @@ int main(){
 	printf("*********************************\n");
 
 	//Qual a opção desejada
-	quarto = toupper(quarto); //Converte para maiúscula
 	printf("\nQual o quarto escolhido: ");
 	scanf("%c", &quarto);
+	quarto = toupper(quarto); //Converte para maiúscula
 
 	//Condição para alternativa inválida
 	if(quarto < 'A' || quarto > 'D')
@@ -58,30 +58,35 @@ int main(){
 		scanf("%d", &diarias_utilizadas);
 		if(diarias_utilizadas <1 || diarias_utilizadas >30)
 		{
-			printf("Dias inválidos, selecione entre 1 e 30!");
+			printf("Dias inválidos, selecione entre 1 e 30!\n");
 		}
 		else
 		{
 			printf("Digite o valor de consumo interno: R$");
 			scanf("%f", &valor_consumo);
+			if(valor_consumo < 0.00 || valor_consumo > 10000.00)
+			{
+				printf("Valor de consumo digitado inválido!");
+			}
+			else
+			{
+				valor_total_diaria = valor_unitario * diarias_utilizadas;
+				subtotal = valor_total_diaria + valor_consumo;
+				taxa = subtotal * 0.1;
+				total = subtotal + taxa;
 
-			valor_total_diaria = valor_unitario * diarias_utilizadas;
-			subtotal = valor_total_diaria + valor_consumo;
-			taxa = subtotal * 0.1;
-			total = subtotal + taxa;
+				system("cls");
 
-			system("cls");
-
-			//Tela final que o usuário vai visualizar
-			printf("\nNome: %s\n", nome);
-			printf("Número de diárias: %d\n", diarias_utilizadas);
-			printf("Valor de consumo interno: R$%.2f\n", valor_consumo);
-			printf("Valor do quarto: R$%.2f\n", valor_unitario);
-			printf("Valor total das diárias: R$%.2f\n", valor_total_diaria);
-			printf("Subtotal: R$%.2f\n", subtotal);
-			printf("Valor cobrado da taxa: R$%.2f\n", taxa);
-			printf("Valor total da sua estadia: R$%.2f\n", total);
-
+				//Tela final que o usuário vai visualizar
+				printf("\nNome: %s\n", nome);
+				printf("Número de diárias: %d\n", diarias_utilizadas);
+				printf("Valor de consumo interno: R$%.2f\n", valor_consumo);
+				printf("Valor do quarto: R$%.2f\n", valor_unitario);
+				printf("Valor total das diárias: R$%.2f\n", valor_total_diaria);
+				printf("Subtotal: R$%.2f\n", subtotal);
+				printf("Valor cobrado da taxa: R$%.2f\n", taxa);
+				printf("Valor total da sua estadia: R$%.2f\n", total);
+			}
 		}
 	}
 
