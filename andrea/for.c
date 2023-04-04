@@ -4,7 +4,8 @@
 
 int main(){
 	setlocale(LC_ALL, "Portuguese");
-	float n1, n2, media, i;
+	float n1, n2, media;
+    int i;
 
 	for(int i = 1; i<=2; i++){
 
