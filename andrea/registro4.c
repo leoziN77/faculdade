@@ -39,7 +39,7 @@ int main(){
 
         custoestoque = registro.custo * registro.quantidade;
 
-        system("cls");
+        printf("\e[1;1H\e[2J");
 
         printf("Revista: %d\n", i);
         printf("-------------------------------------------------------\n");
