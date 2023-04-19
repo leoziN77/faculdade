@@ -29,7 +29,6 @@ int main(){
     do{
         printf("Qual o título da revista ou do jornal: ");
         fgets(registro.titulo, sizeof(registro.titulo), stdin);
-        fflush(stdin);
         printf("Quantidade de revistas ou jornais em estoque: ");
         scanf("%d", &registro.quantidade);
         printf("Custo unitário do título: R$");
