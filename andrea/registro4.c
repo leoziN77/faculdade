@@ -18,6 +18,7 @@ int main(){
 
     printf("Quantos títulos deseja cadastrar: ");
     scanf("%d", &r);
+    fflush(stdin);
 
     if (r <= 0) {
         printf("Quantidade inválida. O programa será encerrado.\n");
@@ -28,7 +29,7 @@ int main(){
     	fflush(stdin); // lê e descarta o caractere de nova linha deixado no buffer pelo scanf
     do{
         printf("Qual o título da revista ou do jornal: ");
-        fflush(stdin);
+        getchar();
         fgets(registro.titulo, sizeof(registro.titulo), stdin);
         printf("Quantidade de revistas ou jornais em estoque: ");
         scanf("%d", &registro.quantidade);
