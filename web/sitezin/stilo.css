@@ -11,7 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(D:/vscode/.vscode/fundo2.jpg) no-repeat;
+    background: url(fundo.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -20,12 +20,14 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 20%;
+    height: 100vh;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    flex-direction: column;
 }
 
 .logo{
@@ -33,6 +35,14 @@ header{
     color: white;
     user-select: none;
 }
+
+.navigation{
+    flex-direction: column;
+    display: flex;
+    gap: 50px;
+    margin-bottom: 280px;
+}
+
 .navigation a{
     position: relative;
     font-size: 1.1em;
@@ -253,3 +263,4 @@ header{
 .login-register p a:hover{
     text-decoration: underline;
 }
+
