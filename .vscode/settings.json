@@ -1,0 +1,7 @@
+{
+    "gitdoc.enabled": true,
+    "files.associations": {
+        "locale.h": "c"
+    },
+    "c-cpp-compile-run.run-in-external-terminal": true
+}
