@@ -1,22 +1,19 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 int main(){
-    setlocale(LC_ALL, "Portuguese");
-    int a,b,soma;
+	setlocale(LC_ALL, "Portuguese");
+	//Declarar vari�vel
+	int a;
 
-    printf("Digite o primeiro valor: ");
-    scanf("%d", &a);
+	for (a = 1; a <= 25; a++)
+	{
+		/* code */
+		printf("%d\n", a);
+	}
+	
 
-    printf("Digite o segundo valor: ");
-    scanf("%d", &b);
-
-    soma = (a+b);
-
-    if(soma > 10)
-    {
-        printf("A soma é igual a: %d\n", soma);
-    }
-    return 0;
+	return 0;
 }
