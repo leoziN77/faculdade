@@ -2,6 +2,11 @@ const fs = require('fs');
 const axios = require('axios');
 const readline = require('readline');
 
+// URL da API de maps
+const mapsApiUrl = 'https://valorant-api.com/v1/maps';
+// URL da API de agentes
+const agentsApiUrl = 'https://valorant-api.com/v1/agents';
+
 // Nome do arquivo onde os dados dos maps serão salvos localmente
 const mapsDataFileName = 'valorant-maps.json';
 // Nome do arquivo onde os dados dos agentes serão salvos localmente
@@ -29,67 +34,20 @@ function loadAgentsDataFromFile() {
   }
 }
 
-// URL da API de maps
-const mapsApiUrl = 'https://valorant-api.com/v1/maps';
-// URL da API de agentes
-const agentsApiUrl = 'https://valorant-api.com/v1/agents';
-
-// Função para buscar os dados dos maps da API e salvá-los em um arquivo local
-async function fetchAndSaveMapsData() {
-  try {
-    // Fazer uma solicitação GET à API de maps
-    const response = await axios.get(mapsApiUrl);
-
-    // Verificar se a solicitação foi bem-sucedida (código de resposta 200)
-    if (response.status === 200) {
-      // Salvar os dados dos maps da API em um arquivo local
-      fs.writeFileSync(mapsDataFileName, JSON.stringify(response.data));
-      console.log('Dados dos maps da API salvos com sucesso.');
-    } else {
-      console.error('Erro na solicitação dos maps. Código de resposta:', response.status);
-    }
-  } catch (error) {
-    console.error('Ocorreu um erro ao buscar os maps:', error.message);
-  }
-}
-
-// Função para buscar os dados dos agentes da API e salvá-los em um arquivo local
-async function fetchAndSaveAgentsData() {
-  try {
-    // Fazer uma solicitação GET à API de agentes
-    const response = await axios.get(agentsApiUrl);
-
-    // Verificar se a solicitação foi bem-sucedida (código de resposta 200)
-    if (response.status === 200) {
-      // Salvar os dados dos agentes da API em um arquivo local
-      fs.writeFileSync(agentsDataFileName, JSON.stringify(response.data));
-      console.log('Dados dos agentes da API salvos com sucesso.');
-    } else {
-      console.error('Erro na solicitação dos agentes. Código de resposta:', response.status);
-    }
-  } catch (error) {
-    console.error('Ocorreu um erro ao buscar os agentes:', error.message);
-  }
-}
-
-// Função para selecionar aleatoriamente 5 agentes
+// Função para selecionar aleatoriamente 5 agentes sem repetições
 function selectRandomAgents(agentsData, count = 5) {
   const selectedAgents = [];
   const totalAgents = agentsData.data.length;
 
-  for (let i = 0; i < count; i++) {
+  while (selectedAgents.length < count) {
     const randomIndex = Math.floor(Math.random() * totalAgents);
     const randomAgent = agentsData.data[randomIndex];
-    selectedAgents.push(randomAgent);
+    if (!selectedAgents.some(agent => agent.displayName === randomAgent.displayName)) {
+      selectedAgents.push(randomAgent);
+    }
   }
 
   return selectedAgents;
-}
-
-// Função para obter a descrição de um mapa a partir do nome
-function getMapDescription(mapsData, mapName) {
-  const map = mapsData.data.find(map => map.displayName.toLowerCase() === mapName.toLowerCase());
-  return map ? map.description : 'Mapa não encontrado.';
 }
 
 // Interface para leitura de entrada do usuário
@@ -116,28 +74,29 @@ async function main() {
 
   // Obter entrada do usuário para selecionar um mapa
   rl.question('Digite o nome de um mapa (por exemplo, "Ascent"): ', mapName => {
-    const mapDescription = getMapDescription(mapsData, mapName);
-    
-    if (mapDescription === 'Mapa não encontrado.') {
-      console.error(mapDescription);
+    const map = mapsData.data.find(map => map.displayName.toLowerCase() === mapName.toLowerCase());
+
+    if (!map) {
+      console.error('Mapa não encontrado.');
       rl.close();
     } else {
-      console.log('Descrição do Mapa:', mapDescription);
+      console.log('Nome do Mapa:', map.displayName);
+      console.log();
 
       // Selecionar aleatoriamente 5 agentes
       const randomAgents = selectRandomAgents(agentsData);
 
       // Exibir informações dos agentes selecionados
       console.log('Agentes Selecionados:');
+      console.log();
       randomAgents.forEach(agent => {
         console.log('Nome do Agente:', agent.displayName);
-        console.log('Descrição do Agente:', agent.description);
         console.log();
       });
-      
-    rl.close();
-  }
-});
+
+      rl.close();
+    }
+  });
 }
 
 // Executar a função principal
