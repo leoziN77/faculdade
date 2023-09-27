@@ -2,3 +2,6 @@
 //npm install nodemon
 //npm init -y
 //npm start
+
+//corrigir o script tirando a função de agentes recomendados
+//o caminho que está no código express não importa, podemos criar um qualquer apenas para definir na url 
